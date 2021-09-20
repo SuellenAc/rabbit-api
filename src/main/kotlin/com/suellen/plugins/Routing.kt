@@ -1,5 +1,6 @@
 package com.suellen.plugins
 
+import com.suellen.routes.randomRabbit
 import io.ktor.routing.*
 import io.ktor.http.*
 import io.ktor.content.*
@@ -10,7 +11,7 @@ import io.ktor.request.*
 
 fun Application.configureRouting() {
     routing {
-        // Static plugin. Try to access `/static/index.html`
+        randomRabbit()
         static {
             resources("static")
         }
